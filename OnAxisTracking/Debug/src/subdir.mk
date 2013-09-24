@@ -4,13 +4,22 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../src/test.c 
+../src/Camera.c \
+../src/Laser.c \
+../src/Vectorizer.c \
+../src/main.c 
 
 OBJS += \
-./src/test.o 
+./src/Camera.o \
+./src/Laser.o \
+./src/Vectorizer.o \
+./src/main.o 
 
 C_DEPS += \
-./src/test.d 
+./src/Camera.d \
+./src/Laser.d \
+./src/Vectorizer.d \
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

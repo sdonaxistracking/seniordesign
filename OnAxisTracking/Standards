@@ -1,0 +1,16 @@
+Integer - n (nMyInteger)
+Object - o	(oMyClass)
+String - s	(sMyString)
+Char - c	(cMyChar)
+Double - dbl (dblMyDouble)
+Float - flt (fltMyFloat)
+
+Creating classes use CamelBack styling
+	thisIsMyClass
+	
+	
+	
+	
+	
+ 
+
