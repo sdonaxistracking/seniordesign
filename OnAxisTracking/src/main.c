@@ -14,7 +14,8 @@
 #include "ueye.h"
 int main()
 {
-/*int c;
+/*int c;sdf
+ *
 IplImage* color_img;
 CvCapture* cv_cap = cvCaptureFromCAM(0);
 cvNamedWindow("Video",0); // create window
