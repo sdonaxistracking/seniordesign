@@ -16,6 +16,7 @@ struct camera{
 
 void getAzimuth();
 void getElevation();
+void initializeCamera();
 
 
 

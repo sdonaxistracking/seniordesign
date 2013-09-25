@@ -9,11 +9,13 @@
 #include "../Include/Camera.h"
 #include "../Include/Vectorizer.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <cv.h>
 #include <highgui.h>
 #include "ueye.h"
 int main()
 {
+	initializeCamera();
 /*int c;sdf
  *
 IplImage* color_img;
@@ -34,5 +36,5 @@ cvDestroyWindow("Video");
 	char* sRange[]={'s'};
 	double dblRange;
 	dblRange = getLaserRange(sRange);
-	printf("The range is: %f",dblRange);
+	//printf("The range is: %f",dblRange);
 }
