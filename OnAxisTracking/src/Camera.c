@@ -95,9 +95,16 @@ void initializeCamera(){
             is_RenderBitmap (m_hCam, m_lMemoryId, m_hWndDisplay, m_nRenderMode);
             	IplImage* tmpImg = cvCreateImageHeader (cvSize (m_nSizeX, m_nSizeY), IPL_DEPTH_8U,3);
                 tmpImg->imageData = m_pcImageMemory;
+                IplImage* threshold = cvCreateImage(cvGetSize(tmpImg),IPL_DEPTH_8U,1);
 
+                cvCvtColor(tmpImg, tmpImg, CV_BGR2HSV);
+                cvSmooth(tmpImg,tmpImg,CV_GAUSSIAN,3,0,1,0);
+                cvInRangeS(tmpImg,cvScalar(0,44,80,0),cvScalar(77,256,256,0), threshold);
+               // cvNamedWindow ("Actual", 1);
+                //cvShowImage ("Acquisition", tmpImg);
+                //cvWaitKey(0);
                 cvNamedWindow ("Acquisition", 1);
-                cvShowImage ("Acquisition", tmpImg);
+                cvShowImage ("Acquisition", threshold);
                 cvWaitKey (0);
         }
     }
